@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/jquery.knob.min.js"></script>
@@ -16,14 +16,23 @@
    <!-- border: 1px dashed black; -->
 }
 
-<!-- In case of portret orientation, force the controls to be placed vertically -->
 .div_2 {
    max-width: 300px;
+   margin: 0px auto;
 }
 
-@media only screen and (orientation: landscape) {
+<!-- In case it does not fit in a row, force the controls to be placed vertically -->
+@media only screen and (max-width: 700px) {
     .div_2 {
-        max-width: 100%;
+        max-width: 300px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .div_2 {
+        max-width: 700px;
+        margin: 0 auto;
     }
 }
 
